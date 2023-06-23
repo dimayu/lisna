@@ -4,7 +4,6 @@ const nunjucks = require('nunjucks');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-const ImageminWebpWebpackPlugin= require("imagemin-webp-webpack-plugin");
 const StylelintPlugin = require('stylelint-webpack-plugin');
 
 const mode = process.env.NODE_ENV || 'development';
@@ -155,8 +154,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'css/[name].[contenthash].css',
     }),
-  
-    new ImageminWebpWebpackPlugin(),
     
     new CleanWebpackPlugin(),
   ],
