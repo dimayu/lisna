@@ -2,29 +2,135 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>webpack</title>
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="viewport"
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>webpack</title>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <!-- Header start -->
-    {% include "./components/header/header.njk" %}
-    <!-- Header end -->
+<!-- Header start -->
+{% include "./components/header/header.njk" %}
+<!-- Header end -->
 
 
-    <!-- Main start -->
-    <main class="main">
-    </main>
-    <!-- Main end -->
+<!-- Main start -->
+<main class="main">
+  <section class="section section-one">
+    <div class="wrapper">
+      <div class="section-one__items">
+          <div class="section-one__items__text">
+              <h2 class="section-one__items__text__title">ЛУЧШИЕ МАТРАСЫ<br>ДЛЯ ВАШЕГО КОМФОРТА</h2>
+              <h3 class="section-one__items__text__subtitle">Матрас – это один из самых важных элементов для нашего комфорта и здоровья во время сна. Он выполняет
+                  несколько функций, таких как поддержка тела, снижение давления на позвоночник, уменьшение болевых ощущений и
+                  расслабление мышц</h3>
+              <button class="btn-feedback">
+                  Связаться<br>с нами
+              </button>
+          </div>
+          <div class="section-one__items__pic">
+            <picture>
+              <source srcset="img/block-1.webp" type="image/webp">
+              <img src="img/block-1.jpg" alt="" width="816" height="700">
+            </picture>
+          </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section-two">
+    <div class="wrapper">
+      <div class="section-two__items">
+        <div class="section-two__items__text">
+          <h2 class="section-two__items__text__title">ПОДБОРЩИК<br>МАТРАСОВ</h2>
+          <h3 class="section-two__items__text__subtitle">Создайте идеальное место<br>для сна</h3>
+          <button class="btn">
+            Подобрать матрас
+          </button>
+        </div>
+        <div class="section-two__items__pic">
+          <svg width="918" height="702" viewBox="0 0 918 702" fill="none" xmlns="http://www.w3.org/2000/svg"
+               xmlns:xlink="http://www.w3.org/1999/xlink" class="mask">
+            <circle cx="571" cy="570.5" r="570" stroke="#235984" stroke-dasharray="17 17"/>
+            <mask id="mask0_0_178" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="33" y="33" width="1076" height="1075">
+              <circle cx="571" cy="570.5" r="537.5" fill="#D9D9D9"/>
+            </mask>
+            <g mask="url(#mask0_0_178)">
+              <rect x="33.5" y="-192" width="885" height="1050" fill="url(#pattern0)"/>
+            </g>
+            <defs>
+              <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                <use xlink:href="#image0_0_178" transform="matrix(0.00177305 0 0 0.00149443 0 -0.0267857)"/>
+              </pattern>
+              <image id="image0_0_178" width="564" height="705" xlink:href="img/block-2.jpg"/>
+            </defs>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="categories">
+    <div class="wrapper">
+      <nav class="categories__items" aria-label="Категории">
+        <ul class="categories__items__list">
+          <li class="categories__items__item">
+            <a href="#" class="categories__items__item__link">
+              <div class="categories__items__item__link--img">
+                <picture>
+                  <source srcset="img/mattresses.webp" type="image/webp">
+                  <img src="img/mattresses.jpg" alt="" width="528" height="562">
+                </picture>
+              </div>
+              <div class="categories__items__item__link--text">
+                <h4>МАТРАСЫ</h4>
+                <p>Более 100 моделей матрасов для Вашего комфортного сна</p>
+              </div>
+            </a>
+          </li>
+          <li class="categories__items__item">
+            <a href="#" class="categories__items__item__link">
+              <div class="categories__items__item__link--img">
+                <picture>
+                  <source srcset="img/beds.webp" type="image/webp">
+                  <img src="img/beds.jpg" alt="" width="528" height="562">
+                </picture>
+              </div>
+              <div class="categories__items__item__link--text">
+                <h4>КРОВАТИ</h4>
+                <p>Более 100 моделей матрасов для Вашего комфортного сна</p>
+              </div>
+            </a>
+          </li>
+          <li class="categories__items__item">
+            <a href="#" class="categories__items__item__link">
+              <div class="categories__items__item__link--img">
+                <picture>
+                  <source srcset="img/accessories.webp" type="image/webp">
+                  <img src="img/accessories.jpg" alt="" width="528" height="562">
+                </picture>
+              </div>
+              <div class="categories__items__item__link--text">
+                <h4>АКСЕССУАРЫ</h4>
+                <p>Более 100 моделей матрасов для Вашего комфортного сна</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</main>
+<!-- Main end -->
 
 
-    <!-- Footer start -->
-    {% include "./components/footer/footer.njk" %}
-    <!-- Footer end -->
+<!-- Footer start -->
+{% include "./components/footer/footer.njk" %}
+<!-- Footer end -->
 </body>
 
 </html>

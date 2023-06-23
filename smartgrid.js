@@ -3,28 +3,36 @@ let smartgrid = require('smart-grid');
 let settings = {
     outputStyle: 'scss',
     columns: 12,
-    offset: '32px',
+    offset: '20px',
     mobileFirst: false,
     container: {
-        maxWidth: '1344px',
-        fields: '48px'
+        maxWidth: '1620px',
+        fields: '150px'
     },
     breakPoints: {
         lm: {
-            width: '1120px',
-            fields: '48px'
+            width: '1620px',
+            fields: '150px'
+        },
+        xlm: {
+            width: '1360px',
+            fields: '32px'
         },
         md: {
             width: '940px',
-            fields: '36px'
+            fields: '32px'
         },
         sm: {
             width: '768px',
-            fields: '36px'
+            fields: '32px'
+        },
+        xs: {
+            width: '540px',
+            fields: '12px'
         },
         xxs: {
             width: '330px',
-            fields: '20px'
+            fields: '12px'
         }
     }
 };

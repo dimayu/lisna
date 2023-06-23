@@ -11,11 +11,20 @@ export const fixedHeader = (fixedElement) => {
 };
 
 // Mobile Menu
-export const mobileMenu = (burgerButton, menu) => {
-  burgerButton.addEventListener("click", (e) => {
-    e.preventDefault();
-    burgerButton.classList.toggle("active");
+export const mobileMenu = (btnClose, menu) => {
+  const burgerArr = document.querySelectorAll(".btn-catalog");
+  
+  burgerArr.forEach(function(el) {
+    el.addEventListener("click", openMenu);
+  });
+  
+  function openMenu () {
     menu.classList.toggle("active");
+  }
+  
+  btnClose.addEventListener("click", (e) => {
+    e.preventDefault();
+    menu.classList.remove("active");
   });
 };
 
@@ -56,3 +65,26 @@ export const maskInput = (phoneInputSelector) => {
     
   });
 };
+
+//Tabs
+export const tabs = (tabLinks, tabContent) => {
+  tabLinks.forEach(function(el) {
+    el.addEventListener("click", openTabs);
+  });
+  
+  function openTabs(el) {
+    const btnTarget = el.currentTarget;
+    const tab = btnTarget.dataset.tab;
+    
+    tabContent.forEach(function(el) {
+      el.classList.remove("active");
+    });
+    
+    tabLinks.forEach(function(el) {
+      el.classList.remove("active");
+    });
+    
+    document.querySelector("#" + tab).classList.add("active");
+    btnTarget.classList.add("active");
+  }
+}
